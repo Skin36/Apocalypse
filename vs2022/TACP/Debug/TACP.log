@@ -1,0 +1,18 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: каталог Output заканчивается не косой чертой.  Этот экземпляр сборки добавит косую черту, поскольку она необходима для правильного определения каталога Output.
+  calc_brain.c
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(85,16): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(101,30): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(159,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(161,42): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(175,42): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(211,31): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(219,35): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(242,16): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(249,23): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(264,24): warning C4018: <: несоответствие типов со знаком и без знака
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(73,14): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _read. See online help for details.
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(136,9): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _lseek. See online help for details.
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(148,14): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _read. See online help for details.
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(198,9): warning C4996: 'lseek': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _lseek. See online help for details.
+D:\FreeApoc\Apocalypse\TACP\C_Sources\calc_brain.c(234,14): warning C4996: 'read': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _read. See online help for details.
+  TACP.vcxproj -> D:\FreeApoc\Apocalypse\XCOMAPOC\TACP.exe

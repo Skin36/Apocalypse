@@ -1,0 +1,23 @@
+﻿cursor.obj : error LNK2001: неразрешенный внешний символ _current_pal.
+window.obj : error LNK2001: неразрешенный внешний символ _current_pal.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _play_music в функции _SDL_main.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _main_ в функции _SDL_main.
+sdl_event.obj : error LNK2019: ссылка на неразрешенный внешний символ _mouse_update в функции _get_cursor_pos.
+sdl_event.obj : error LNK2019: ссылка на неразрешенный внешний символ _keyboard_update в функции _SDL_events.
+sound.obj : error LNK2001: неразрешенный внешний символ _map_view_flag.
+sound.obj : error LNK2001: неразрешенный внешний символ _main_volum_flg.
+sound.obj : error LNK2001: неразрешенный внешний символ _snd_volum_flg.
+sound.obj : error LNK2001: неразрешенный внешний символ _swap_channal_flag.
+sound.obj : error LNK2001: неразрешенный внешний символ _camera_coord_x_3.
+sound.obj : error LNK2001: неразрешенный внешний символ _camera_coord_y_5.
+sound.obj : error LNK2001: неразрешенный внешний символ _camera_coord_7_x.
+sound.obj : error LNK2001: неразрешенный внешний символ _camera_coord_9_y.
+sound.obj : error LNK2001: неразрешенный внешний символ _camera_z_coord.
+sound.obj : error LNK2001: неразрешенный внешний символ _main_volum.
+sound.obj : error LNK2001: неразрешенный внешний символ _snd_volum.
+window.obj : error LNK2001: неразрешенный внешний символ _temp_screen_buffer.
+window.obj : error LNK2001: неразрешенный внешний символ _screenx.
+window.obj : error LNK2001: неразрешенный внешний символ _screenx_1.
+window.obj : error LNK2001: неразрешенный внешний символ _screeny.
+window.obj : error LNK2001: неразрешенный внешний символ _screeny_1.
+D:\FreeApoc\Apocalypse\vs2022\Apocalypse\Debug\UFOP.exe : fatal error LNK1120: неразрешенных внешних элементов: 21

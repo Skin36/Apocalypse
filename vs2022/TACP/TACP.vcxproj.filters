@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="C Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ASM Sources">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\TACP\C_Sources\cursor.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\keyboard.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\library_func.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\main.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\music.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\palette.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\sdl_event.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\timer.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\window.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\calc_brain.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\TACP\C_Sources\cursor.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\debug.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\keyboard.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\music.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\palette.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\sdl_event.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\TACP.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\timer.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\window.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\calc_brain.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\TACP\ASM_Sources\TACP4.asm">
+      <Filter>ASM Sources</Filter>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\TACP\ASM_Sources\TACP4.inc">
+      <Filter>ASM Sources</Filter>
+    </None>
+    <None Include="..\..\TACP\ASM_Sources\TACP4_data.inc">
+      <Filter>ASM Sources</Filter>
+    </None>
+    <None Include="..\..\TACP\ASM_Sources\TACP4_struct.inc">
+      <Filter>ASM Sources</Filter>
+    </None>
+  </ItemGroup>
+</Project>
