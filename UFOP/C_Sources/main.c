@@ -2,13 +2,13 @@
 //#include <stdio.h>
 //#include <SDL_audio.h>
 //#include <SDL_mixer.h>
-//#include "UFO2P4.h"
+#include "UFO2P.h"
 #include "music.h"
 #include "timer.h"
 #include "window.h"
-
-
-#define DEBUG
+#include "cursor.h"
+#include <stdint.h>
+//#define DEBUG
 
 
 int main(int argc, char* argv[])
@@ -40,17 +40,17 @@ int main(int argc, char* argv[])
 		return 2;
 	}
 
-	if (sound_init())
-	{
-		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Problem", "Error init sound!", NULL);
-		return 3;
-	}
+	//if (sound_init())
+	//{
+		//SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Problem", "Error init sound!", NULL);
+		//return 3;
+	//}
 
 
 	//init_game_path();
 	//GAME_PATH = GAME_PATH1;
 	//printf("%s", GAME_PATH);
-	play_music();
+	//play_music();
 	//sdl_window_show();
 	
 	return main_(argc, (const char**)argv, NULL);

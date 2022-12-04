@@ -1,9 +1,14 @@
+
 #include "exit.h"
+//#include "timer.h"
+//#include "music.h"
+//#include "sound.h"
 
 void exit_all(int selector)
 {
 /*
     selector = 3;
+    
     int v1;
     int Buffer;
     if (selector == 1)
@@ -27,11 +32,12 @@ void exit_all(int selector)
     {
         __execl("TACP.exe", "TACP.exe", 5, 5, 0);
     }
+
     remove_timer();
     close_music();
     close_sound();
     close_video();
-    _exit(1);
+    exit(1);
 */
 }
 
