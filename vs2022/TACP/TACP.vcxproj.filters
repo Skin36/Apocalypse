@@ -45,6 +45,9 @@
     <ClCompile Include="..\..\TACP\C_Sources\calc_brain.c">
       <Filter>C Sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\exit.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TACP\C_Sources\cursor.h">
@@ -77,11 +80,9 @@
     <ClInclude Include="..\..\TACP\C_Sources\calc_brain.h">
       <Filter>C Sources</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <MASM Include="..\..\TACP\ASM_Sources\TACP4.asm">
-      <Filter>ASM Sources</Filter>
-    </MASM>
+    <ClInclude Include="..\..\TACP\C_Sources\exit.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\TACP\ASM_Sources\TACP4.inc">
@@ -93,5 +94,10 @@
     <None Include="..\..\TACP\ASM_Sources\TACP4_struct.inc">
       <Filter>ASM Sources</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\TACP\ASM_Sources\TACP4.asm">
+      <Filter>ASM Sources</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
