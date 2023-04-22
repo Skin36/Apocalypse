@@ -280,37 +280,7 @@ uint8_t* raw_track[215];
  extern uint16_t main_volum;
  extern uint16_t snd_volum;
  
-
- int m_num_simultaneously_playing_channels;
  uint16_t main_volum_tmp;
-
-
-
- int sound_init()
- {
-     int ret_val = 0;
-
-     if (SDL_Init(SDL_INIT_AUDIO))
-     {
-         printf("%s %s \n", "ERROR: SDL init audio. ", SDL_GetError());
-         ret_val |= -1;
-     }
-     m_num_simultaneously_playing_channels = 10;
-     int max_channels = 104 * m_num_simultaneously_playing_channels;
-     int num_channels = Mix_AllocateChannels(max_channels);
-     int num_reserve_channels = Mix_ReserveChannels(max_channels);
-     if (num_channels != max_channels || num_reserve_channels != max_channels)
-     {
-         printf("%s %d \n", "ERROR: allocate channels.Current channels number is ", num_channels);
-         ret_val |= -1;
-     }
-     if (Mix_Volume(-1, MIX_MAX_VOLUME) != MIX_MAX_VOLUME)
-     {
-         ret_val |= -1;
-     }
-
-     return ret_val;
- }
 
 
 int sound(int raw_ind, int16_t x_pos, int16_t y_pos, int16_t z_pos, int16_t unc)
@@ -322,11 +292,7 @@ int sound(int raw_ind, int16_t x_pos, int16_t y_pos, int16_t z_pos, int16_t unc)
         int ret_val = 0;
         //int freq = (chunks_raw + raw_ind)->bitrate;
 
-        if (Mix_OpenAudio(22050, AUDIO_U8, 1, 512) < 0)//11050, AUDIO_U8, 2, 512
-        {
-            printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
-            ret_val = 0;
-        }
+
 
         int l_balance;
         int r_balance;

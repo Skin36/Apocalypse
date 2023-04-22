@@ -1,4 +1,6 @@
 #include <SDL.h>
+#include <stdlib.h>
+
 #include "window.h"
 #include "timer.h"
 #include "sound.h"
@@ -7,10 +9,16 @@
 
 #define DEBUG
 
-
+char selector;
 
 int main(int argc, char* argv[])
 {
+
+	printf("This program is executed with these command line ");
+	printf("arguments: ");
+	selector = atoi(argv[0]);
+	printf(" %d", selector);
+
 	if (video_init())
 	{
 		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Problem", "Error init video!", NULL);

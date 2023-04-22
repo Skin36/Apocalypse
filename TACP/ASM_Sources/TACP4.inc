@@ -1,7 +1,8 @@
 ;==========================================================
 DEBUG = 0
 ;==========================================================
-
+extrn selector:byte
+;=========================================================
 extrn fopen:proc
 extrn fclose:proc
 extrn fread:proc
@@ -27,10 +28,11 @@ extrn puts:proc
 ;extrn getch:proc
 ;extrn putchar:proc
 extrn _cprintf:proc
+extrn cprintf:proc
 extrn fgetc:proc
 
 
-;extrn remove:proc
+extrn remove:proc
 
 extrn dos_delay:proc
 extrn clock:proc
@@ -38,6 +40,7 @@ extrn clock:proc
 extrn free:proc
 extrn malloc:proc
 extrn exit:proc
+extrn exit_all:proc
 ;======================cursor==============================
 extrn draw_cursor:proc
 ;====================== BRAIN ==============================

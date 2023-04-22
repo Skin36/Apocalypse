@@ -41,7 +41,7 @@ int SDL_events()
         {
             if (event.type == SDL_KEYDOWN)
             {
-                akey = code_conv(event.key.keysym.sym);
+                akey = code_conv(event.key.keysym.scancode);
                 if (akey < 255)
                 {
                     keyboard_update(akey);
@@ -54,7 +54,7 @@ int SDL_events()
             }
             if (event.type == SDL_KEYUP)
             {
-                akey = code_conv(event.key.keysym.sym);
+                akey = code_conv(event.key.keysym.scancode);
                 if (akey < 255)
                 {
                     keyboard_update(akey + 128);
@@ -76,14 +76,7 @@ int SDL_events()
 int get_cursor_pos(void)
 {
     SDL_GetMouseState(&mouse_x_pos, &mouse_y_pos);
-    if (MOUSE_BUTTONS_STATE) {
-
-        //printf("%d \n", MOUSE_BUTTONS_STATE);
-        //printf("x= %d  y= %d\n", mouse_x_pos, mouse_y_pos);
-        mouse_update(MOUSE_BUTTONS_STATE, mouse_y_pos, mouse_x_pos);
-      
-        MOUSE_BUTTONS_STATE = 0;
-    }
-
+    mouse_update(MOUSE_BUTTONS_STATE, mouse_y_pos, mouse_x_pos);
+    MOUSE_BUTTONS_STATE = 0;
     return 0;
 }
