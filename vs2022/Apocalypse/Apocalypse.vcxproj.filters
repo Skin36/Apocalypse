@@ -6,4 +6,14 @@
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\APOC\C_Sources\main.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\APOC\C_Sources\restart.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
