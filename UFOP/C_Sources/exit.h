@@ -2,6 +2,6 @@
 #ifndef EXIT_H_INCLUDED
 #define EXIT_H_INCLUDED
 
-void exit_all(int selector);
+void exit_all(int sel);
 
 #endif

@@ -8,16 +8,16 @@ int Scancode [231] =
     0x3,                     // 3
     0x1E,      //SDL_SCANCODE_A 4
     0x30,      //SDL_SCANCODE_B 5
-    0x2E,      //SDL_SCANCODE_C
-    0x20,      //SDL_SCANCODE_D
-    0x12,      //SDL_SCANCODE_E
-    0x21,      //SDL_SCANCODE_F
-    0x22,      //SDL_SCANCODE_G
-    0x23,      //SDL_SCANCODE_H
-    0x17,      //SDL_SCANCODE_I
-    0x24,      //SDL_SCANCODE_J
-    0x25,      //SDL_SCANCODE_K
-    0x26,      //SDL_SCANCODE_L
+    0x2E,      //SDL_SCANCODE_C 6
+    0x20,      //SDL_SCANCODE_D 7
+    0x12,      //SDL_SCANCODE_E 8
+    0x21,      //SDL_SCANCODE_F 9
+    0x22,      //SDL_SCANCODE_G 10
+    0x23,      //SDL_SCANCODE_H 11
+    0x17,      //SDL_SCANCODE_I 12
+    0x24,      //SDL_SCANCODE_J 13
+    0x25,      //SDL_SCANCODE_K 14
+    0x26,      //SDL_SCANCODE_L 15
     0x32,      //SDL_SCANCODE_M
     0x31,      //SDL_SCANCODE_N
     0x18,      //SDL_SCANCODE_O

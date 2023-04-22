@@ -1,18 +1,25 @@
 #include <SDL.h>
-//#include <stdio.h>
-//#include <SDL_audio.h>
-//#include <SDL_mixer.h>
+#include <stdio.h>
 #include "UFO2P.h"
-#include "music.h"
 #include "timer.h"
 #include "window.h"
 #include "cursor.h"
+#include "soundsystem.h"
 #include <stdint.h>
+#include <stdlib.h>
 //#define DEBUG
 
 
+char selector;
+
 int main(int argc, char* argv[])
 {
+	printf("This program is executed with these command line ");
+	printf("arguments: ");
+	selector = atoi(argv[0]);
+	//printf(" %d", selector);
+
+
 
 	//printf("%-20s", "this is a test");
 	//_cprintf("%-20s", "this is a test");
@@ -40,11 +47,11 @@ int main(int argc, char* argv[])
 		return 2;
 	}
 
-	//if (sound_init())
-	//{
-		//SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Problem", "Error init sound!", NULL);
-		//return 3;
-	//}
+	if (soundsystem_init())
+	{
+		SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, "Problem", "Error init sound!", NULL);
+		return 3;
+	}
 
 
 	//init_game_path();
