@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\UFOP\ASM_Sources\UFO2P4.asm">
-      <Filter>ASM Sources</Filter>
-    </None>
     <None Include="..\..\UFOP\ASM_Sources\UFO2P4_data.inc">
       <Filter>ASM Sources</Filter>
     </None>
@@ -47,9 +44,6 @@
     <ClCompile Include="..\..\UFOP\C_Sources\sdl_event.c">
       <Filter>C Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\UFOP\C_Sources\sound.c">
-      <Filter>C Sources</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\UFOP\C_Sources\timer.c">
       <Filter>C Sources</Filter>
     </ClCompile>
@@ -57,6 +51,15 @@
       <Filter>C Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\UFOP\C_Sources\cursor.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\palette.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\soundsystem.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\wav.c">
       <Filter>C Sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,9 +74,6 @@
       <Filter>C Sources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\UFOP\C_Sources\sdl_event.h">
-      <Filter>C Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\UFOP\C_Sources\sound.h">
       <Filter>C Sources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\UFOP\C_Sources\timer.h">
@@ -91,5 +91,19 @@
     <ClInclude Include="..\..\UFOP\C_Sources\cursor.h">
       <Filter>C Sources</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\palette.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\soundsystem.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\wav.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="..\..\UFOP\ASM_Sources\UFO2P4.asm">
+      <Filter>ASM Sources</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
