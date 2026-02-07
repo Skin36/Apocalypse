@@ -51,43 +51,43 @@ static const char* cur_image[] = {
 
 int draw_cursor(uint8_t* cur_img)
 {
-	
-    cur_surface = SDL_CreateRGBSurfaceFrom(cur_img, 24, 24, 8, 24, 0, 0, 0,0);
+
+    cur_surface = SDL_CreateRGBSurfaceFrom(cur_img, 24, 24, 8, 24, 0, 0, 0, 0);
     set_cur_palette();
     ufo_cursor = SDL_CreateColorCursor(cur_surface, 0, 0);
     SDL_SetCursor(ufo_cursor);
-       
+
     return 1;
 }
 
 
 void set_cur_palette()
 {
-	SDL_Color color;
-	SDL_Palette* p = cur_surface->format->palette;
-	int ret_val = 0;
+    SDL_Color color;
+    SDL_Palette* p = cur_surface->format->palette;
+    int ret_val = 0;
 
-	int n = 0;
-	for (int i = 0; i < 256; i++)
-	{
-		if (n == 0)
-		{
-			color.r = (current_pal[n * 3] << 2 | (current_pal[n * 3] >> 4 & 0x3));
-			color.g = (current_pal[n * 3 + 1] << 2 | (current_pal[n * 3 + 1] >> 4 & 0x3));
-			color.b = (current_pal[n * 3 + 2] << 2 | (current_pal[n * 3 + 2] >> 4 & 0x3));
-			color.a = 0;
-		}
-		else
-		{ 
-			color.r = (current_pal[n * 3] << 2 | (current_pal[n * 3] >> 4 & 0x3));
-			color.g = (current_pal[n * 3 + 1] << 2 | (current_pal[n * 3 + 1] >> 4 & 0x3));
-			color.b = (current_pal[n * 3 + 2] << 2 | (current_pal[n * 3 + 2] >> 4 & 0x3));
-			color.a = 255;
+    int n = 0;
+    for (int i = 0; i < 256; i++)
+    {
+        if (n == 0)
+        {
+            color.r = (current_pal[n * 3] << 2 | (current_pal[n * 3] >> 4 & 0x3));
+            color.g = (current_pal[n * 3 + 1] << 2 | (current_pal[n * 3 + 1] >> 4 & 0x3));
+            color.b = (current_pal[n * 3 + 2] << 2 | (current_pal[n * 3 + 2] >> 4 & 0x3));
+            color.a = 0;
         }
-		n++;
-		ret_val |= SDL_SetPaletteColors(p, &color, i, 1);
-	}
-	ret_val |= SDL_SetSurfacePalette(cur_surface, p);
+        else
+        {
+            color.r = (current_pal[n * 3] << 2 | (current_pal[n * 3] >> 4 & 0x3));
+            color.g = (current_pal[n * 3 + 1] << 2 | (current_pal[n * 3 + 1] >> 4 & 0x3));
+            color.b = (current_pal[n * 3 + 2] << 2 | (current_pal[n * 3 + 2] >> 4 & 0x3));
+            color.a = 255;
+        }
+        n++;
+        ret_val |= SDL_SetPaletteColors(p, &color, i, 1);
+    }
+    ret_val |= SDL_SetSurfacePalette(cur_surface, p);
 
 }
 
@@ -147,8 +147,8 @@ int cursor_init()
 
 void curr_exit()
 {
-	SDL_FreeCursor(ufo_cursor);
-	SDL_FreeSurface(cur_surface);
+    SDL_FreeCursor(ufo_cursor);
+    SDL_FreeSurface(cur_surface);
 }
 
 
