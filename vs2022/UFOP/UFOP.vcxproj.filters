@@ -13,6 +13,21 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="C Sources\junction">
+      <UniqueIdentifier>{b01fe79f-c83b-4c6e-b964-7cd52890fbf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\game_init">
+      <UniqueIdentifier>{33ddeba8-c0cf-435f-a34f-08a75e5bbab6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\debug">
+      <UniqueIdentifier>{3ea15f62-d6b1-44b5-8448-dddc944c4a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\exit">
+      <UniqueIdentifier>{459cc531-2b19-4a2b-8a78-7802fcc4ee7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\option">
+      <UniqueIdentifier>{5a47f7d3-ebbc-441f-b163-5fc4f5c1a504}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\UFOP\ASM_Sources\UFO2P4_data.inc">
@@ -27,9 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\UFOP\C_Sources\cfunc.c">
-      <Filter>C Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\UFOP\C_Sources\exit.c">
       <Filter>C Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\UFOP\C_Sources\keyboard.c">
@@ -59,17 +71,29 @@
     <ClCompile Include="..\..\UFOP\C_Sources\soundsystem.c">
       <Filter>C Sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\UFOP\C_Sources\wav.c">
+    <ClCompile Include="..\..\UFOP\C_Sources\sound.c">
       <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\consol.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\junction.c">
+      <Filter>C Sources\junction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\struc_init.c">
+      <Filter>C Sources\game_init</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\debug.c">
+      <Filter>C Sources\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\exit.c">
+      <Filter>C Sources\exit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\UFOP\C_Sources\option.c">
+      <Filter>C Sources\option</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\UFOP\C_Sources\debug.h">
-      <Filter>C Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\UFOP\C_Sources\exit.h">
-      <Filter>C Sources</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\UFOP\C_Sources\music.h">
       <Filter>C Sources</Filter>
     </ClInclude>
@@ -97,8 +121,26 @@
     <ClInclude Include="..\..\UFOP\C_Sources\soundsystem.h">
       <Filter>C Sources</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\UFOP\C_Sources\wav.h">
+    <ClInclude Include="..\..\UFOP\C_Sources\sound.h">
       <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\consol.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\junction.h">
+      <Filter>C Sources\junction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\struc_init.h">
+      <Filter>C Sources\game_init</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\debug.h">
+      <Filter>C Sources\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\exit.h">
+      <Filter>C Sources\exit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\UFOP\C_Sources\option.h">
+      <Filter>C Sources\option</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

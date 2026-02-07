@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{82b6aa0f-505c-48b3-850d-7e48ac441d7b}</ProjectGuid>
     <RootNamespace>UFOP</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -82,6 +82,7 @@
     <LibraryPath>D:\FreeApoc\Apocalypse\SDL2\lib\x86;D:\FreeApoc\Apocalypse\SDL2_mixer\lib\x86;$(LibraryPath)</LibraryPath>
     <SourcePath>D:\FreeApoc\Apocalypse\UFOP\ASM_Sources;D:\FreeApoc\Apocalypse\UFOP\C_Sources;$(SourcePath</SourcePath>
     <OutDir>D:\FreeApoc\Apocalypse\XCOMAPOC\</OutDir>
+    <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -129,6 +130,8 @@
     </Link>
     <MASM>
       <EnableMASM51Compatibility>true</EnableMASM51Compatibility>
+      <PerformSyntaxCheckOnly>false</PerformSyntaxCheckOnly>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </MASM>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -169,30 +172,39 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\UFOP\C_Sources\cfunc.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\consol.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\cursor.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\debug.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\exit.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\junction.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\keyboard.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\main.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\music.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\option.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\palette.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\sdl_event.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\sound.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\soundsystem.c" />
+    <ClCompile Include="..\..\UFOP\C_Sources\struc_init.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\timer.c" />
-    <ClCompile Include="..\..\UFOP\C_Sources\wav.c" />
     <ClCompile Include="..\..\UFOP\C_Sources\window.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\UFOP\C_Sources\consol.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\cursor.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\debug.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\exit.h" />
+    <ClInclude Include="..\..\UFOP\C_Sources\junction.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\keyboard.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\music.h" />
+    <ClInclude Include="..\..\UFOP\C_Sources\option.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\palette.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\sdl_event.h" />
+    <ClInclude Include="..\..\UFOP\C_Sources\sound.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\soundsystem.h" />
+    <ClInclude Include="..\..\UFOP\C_Sources\struc_init.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\timer.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\UFO2P.h" />
-    <ClInclude Include="..\..\UFOP\C_Sources\wav.h" />
     <ClInclude Include="..\..\UFOP\C_Sources\window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
