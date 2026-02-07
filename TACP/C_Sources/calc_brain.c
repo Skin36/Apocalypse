@@ -35,7 +35,7 @@ struct  experien_struct
 
 int section_array[25][6] = { 0 };
 struct brain_struct* brain_ptr;
-int brain_index_count = 0;
+int brain_index_count_ = 0;
 
 int fd;
 char* BRAIN_DAT;
@@ -68,10 +68,10 @@ int fill_brain(void)
 
 
 
-    int v9;
+    uint32_t v9;
     while (1)
     {
-        if ((read(fd, exs_ptr, 114)) != 114) {
+        if ((_read(fd, exs_ptr, 114)) != 114) {
             printf("EXPERIEN section less then 114 bytes.\n");
             break;
         }
@@ -86,7 +86,7 @@ int fill_brain(void)
         if (v9 < (brain_ptr + brn_row)->section)
             v9 = (brain_ptr + brn_row)->section;
         (brain_ptr + brn_row)->section = v9;
-        int v14 = 0;
+        uint32_t v14 = 0;
         int* v11 = &section_array[brn_row][exs_ptr->section];
 
         //printf("index %5d row_count %5d section %5d \n",(brain_ptr + brn_row)->index,(brain_ptr + brn_row)->row_count,(brain_ptr + brn_row)->section);
@@ -134,10 +134,10 @@ int fill_brain(void)
 
 
 
-    if (lseek(fd, 0, 0))
+    if (_lseek(fd, 0, 0))
         return -3;
 
-    int k;
+    uint32_t k;
     float v107;
     float v105;
     float v109;
@@ -146,7 +146,7 @@ int fill_brain(void)
     float v27;
     while (1)
     {
-        if ((read(fd, exs_ptr, 114)) != 114)
+        if ((_read(fd, exs_ptr, 114)) != 114)
         {
             printf("EXPERIEN section less then 114 bytes.\n");
             break;
@@ -193,13 +193,13 @@ int fill_brain(void)
 
  /* --------------------------------------PART 3 scaling--------------------------------------------------------------- */
     int num;
-    int m, n;
-    int temp_section;
+    uint32_t m, n;
+    uint32_t temp_section;
 
-    if (lseek(fd, 0, 0))
+    if (_lseek(fd, 0, 0))
         return -3;
 
-    for (num = 0; num < brain_index_count; ++num)
+    for (num = 0; num < brain_index_count_; ++num)
     {
         temp_section = 0;
 
@@ -232,7 +232,7 @@ int fill_brain(void)
     while (1)
     {
         k = 0;
-        if ((read(fd, exs_ptr, 114)) != 114)
+        if ((_read(fd, exs_ptr, 114)) != 114)
         {
             printf("EXPERIEN section less then 114 bytes.\n");
             break;
@@ -270,7 +270,7 @@ int fill_brain(void)
 
     /* --------------------------------------PART 4 calc Gaus-------------------------------------------------------------- */
 
-    if(lseek(fd, 0, 0))
+    if(_lseek(fd, 0, 0))
         return -3;
 
 
@@ -299,12 +299,12 @@ int find_row_brain_dat(int index, int row_count, int section) {
     int v20 = 0;
     int brain_index_count_temp = 0;
 
-    if (brain_index_count > 0)
+    if (brain_index_count_ > 0)
     {
         while (index != (brain_ptr + k)->index)
         {
             ++k;
-            if (k >= brain_index_count)
+            if (k >= brain_index_count_)
                 goto lebel_8;
         }
         v20 = 1;
@@ -315,12 +315,12 @@ int find_row_brain_dat(int index, int row_count, int section) {
 
 lebel_8:
     if (!v20) {
-        if (brain_index_count >= 25)
+        if (brain_index_count_ >= 25)
             return -1;
-        brain_index_count_temp = brain_index_count;
-        (brain_ptr + brain_index_count)->index = index;
-        (brain_ptr + brain_index_count)->row_count = row_count;
-        (brain_ptr + brain_index_count)->section = section;
+        brain_index_count_temp = brain_index_count_;
+        (brain_ptr + brain_index_count_)->index = index;
+        (brain_ptr + brain_index_count_)->row_count = row_count;
+        (brain_ptr + brain_index_count_)->section = section;
 
         int i;
         int j;
@@ -333,29 +333,29 @@ lebel_8:
 
             for (j = 0; j < row_count; ++j)
             {
-                (brain_ptr + brain_index_count)->fsection[i].shot_section[j][0] = -0.5;
-                (brain_ptr + brain_index_count)->fsection[i].shot_section[j][1] = 1.0;
+                (brain_ptr + brain_index_count_)->fsection[i].shot_section[j][0] = -0.5;
+                (brain_ptr + brain_index_count_)->fsection[i].shot_section[j][1] = 1.0;
                 for (k = 2; k < 12; ++k)
                 {
-                    (brain_ptr + brain_index_count)->fsection[i].shot_section[j][k] = 0;
+                    (brain_ptr + brain_index_count_)->fsection[i].shot_section[j][k] = 0;
                 }
 
             }
-            (brain_ptr + brain_index_count)->fsection[i].total = 0;
+            (brain_ptr + brain_index_count_)->fsection[i].total = 0;
             for (l = 0; l < 25; ++l)
             {
                 for (n = 0; n < 25; ++n)
                 {
                     if (l = n)//why it not work for [0][0] ?
-                        (brain_ptr + brain_index_count)->fsection[i].long_section[l][n] = 1;
+                        (brain_ptr + brain_index_count_)->fsection[i].long_section[l][n] = 1;
                     else
-                        (brain_ptr + brain_index_count)->fsection[i].long_section[l][n] = 0;
+                        (brain_ptr + brain_index_count_)->fsection[i].long_section[l][n] = 0;
                 }
             }
-            (brain_ptr + brain_index_count)->fsection[i].long_section[0][0] = 1;
+            (brain_ptr + brain_index_count_)->fsection[i].long_section[0][0] = 1;
 
         }
-        ++brain_index_count;
+        ++brain_index_count_;
     }
 
     return brain_index_count_temp;

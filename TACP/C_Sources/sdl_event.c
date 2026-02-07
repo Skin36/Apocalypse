@@ -1,6 +1,7 @@
 #include <SDL.h>
 #include "sdl_event.h"
 #include "keyboard.h"
+#include <stdbool.h>
 
 int mouse_x_pos;
 int mouse_y_pos;
@@ -8,6 +9,26 @@ uint32_t akey;
 uint8_t MOUSE_BUTTONS_STATE;
 int get_cursor_pos(void);
 int x, y;
+
+// for C input
+
+int key_press(char* key);
+int input[256];
+
+int key_press(char* key) {
+
+    uint8_t code_a = (uint8_t)*key;
+    if (code_a < 95)
+        code_a += 32;
+
+    if (input[code_a - 93])
+        return 1;
+    return 0;
+
+}
+
+
+
 
 int SDL_events()
 {
@@ -41,10 +62,13 @@ int SDL_events()
         {
             if (event.type == SDL_KEYDOWN)
             {
+
+
                 akey = code_conv(event.key.keysym.scancode);
                 if (akey < 255)
                 {
                     keyboard_update(akey);
+                    input[event.key.keysym.scancode] = true; //for C
                 }
                 else
                 {
@@ -54,6 +78,8 @@ int SDL_events()
             }
             if (event.type == SDL_KEYUP)
             {
+                input[event.key.keysym.scancode] = false;//for C
+
                 akey = code_conv(event.key.keysym.scancode);
                 if (akey < 255)
                 {
@@ -72,6 +98,7 @@ int SDL_events()
     return 0;
 
 }
+
 
 int get_cursor_pos(void)
 {

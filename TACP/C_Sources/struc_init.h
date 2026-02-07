@@ -1,13 +1,41 @@
 #pragma once
-#ifndef DEBUG_H_INCLUDED
-#define DEBUG_H_INCLUDED
-
-#define DEBUG
-int debug_brain(void);
-void load_units(void);
+#ifndef STRUC_INIT_H_INCLUDED
+#define STRUC_INIT_H_INCLUDED
 #include <stdint.h>
 
-struct units_struc
+#endif
+
+int all_struct_alloc(void);
+int free_all_mem(void);
+//                      STRUCTURE
+//___________________________________________________________________
+struct behavior_struct
+{
+	uint8_t beh_0;
+	uint8_t beh_2;
+	uint8_t item_group;
+	uint8_t item_type;
+	uint8_t unit_action;
+	uint8_t agent_1;
+	uint8_t val_6;
+	uint8_t AI_control_none;
+	int16_t x_pos;
+	int16_t y_pos;
+	int16_t z_pos;
+	int16_t val_2;
+	int16_t val_3;
+	int16_t val_4;
+	int16_t val_5;
+};
+struct expirean_struct
+{
+	uint16_t flag;
+    int32_t index;
+	uint32_t max_value;
+	uint32_t entry[25];
+	uint32_t section;
+};
+struct units_struct
 {
 	int16_t image;
 	int16_t image_2;
@@ -551,11 +579,282 @@ struct units_struc
 	int16_t accuracy_3;
 	int16_t psi_energy_3;
 	int16_t psi_attack_3;
-}units_instance[60];
+};
+struct brain_struct
+{
+	uint32_t index;
+	uint32_t row_count;
+	uint32_t section;
+	struct float_sections
+	{
+		float shot_section[25][12];
+		float total;
+		float long_section[25][25];
+	} fsection[6];
+};
+struct losarea_struct
+{
+	int8_t field_0;
+	int8_t field_1;
+	int16_t x_coord1;
+	int16_t y_coord1;
+	int16_t z_coord1;
+	int16_t x_coord2;
+	int16_t y_coord2;
+	int16_t z_coord2;
+	int16_t sections_x;
+	int16_t sections_y;
+	int16_t sections_z;
+	int8_t field_14;
+	int8_t field_15;
+	int8_t field_16;
+	int8_t field_17;
+	int8_t field_18;
+	int8_t field_19;
+	int8_t field_1A;
+	int8_t field_1B;
+	int8_t field_1C;
+	int8_t field_1D;
+	int8_t field_1E;
+	int8_t field_1F;
+	int8_t field_20;
+	int8_t field_21;
+	int8_t field_22;
+	int8_t field_23;
+	int8_t field_24;
+	int8_t field_25;
+	int8_t field_26;
+	int8_t field_27;
+	int8_t field_28;
+	int8_t field_29;
+	int8_t field_2A;
+	int8_t field_2B;
+	int8_t field_2C;
+	int8_t field_2D;
+	int8_t field_2E;
+	int8_t field_2F;
+	int8_t field_30;
+	int8_t field_31;
+	int8_t field_32;
+	int8_t field_33;
+	int8_t field_34;
+	int8_t field_35;
+	int8_t field_36;
+	int8_t field_37;
+	int8_t field_38;
+	int8_t field_39;
+	int8_t field_3A;
+	int8_t field_3B;
+	int8_t field_3C;
+	int8_t field_3D;
+	int8_t field_3E;
+	int8_t field_3F;
+	int8_t field_40;
+	int8_t field_41;
+	int8_t field_42;
+	int8_t field_43;
+	int8_t field_44;
+	int8_t field_45;
+	int8_t field_46;
+	int8_t field_47;
+	int8_t field_48;
+	int8_t field_49;
+	int8_t field_4A;
+	int8_t field_4B;
+	int8_t field_4C;
+	int8_t field_4D;
+	int8_t field_4E;
+	int8_t field_4F;
+	int8_t field_50;
+	int8_t field_51;
+	int8_t field_52;
+	int8_t field_53;
+	int8_t field_54;
+	int8_t field_55;
+	int8_t field_56;
+	int8_t field_57;
+	int8_t field_58;
+	int8_t field_59;
+	int8_t field_5A;
+	int8_t field_5B;
+	int8_t field_5C;
+	int8_t field_5D;
+	int8_t field_5E;
+	int8_t field_5F;
+	int8_t field_60;
+	int8_t field_61;
+	int8_t org_offset[28];
+	int8_t field_7E;
+	int8_t field_7F;
+	int8_t field_80;
+	int8_t field_81;
+	int8_t AI_Patrol_Priority;
+	int8_t AI_Target_Priority;
+	int8_t Spawn_Type;
+	int8_t Spawn_Priority;
+	int8_t Can_Deploy_Large_Units;
+	int8_t Can_Deploy_Non_Flying_Units;
+};
+//===================================================================
 
+//                      POINTERS
+//___________________________________________________________________
+struct units_struct* units_t;
+struct expirean_struct* expirean_t;
+struct brain_struct* brain_t;
+struct behavior_struct* behavior_t;
+struct losarea_struct* losarea_t;
 
+//===========================RND=======================================
+//uint8_t random_dat_ofs = 0; //смещение для файла случайных чисел
+//uint8_t rnd_dt[10013] = {0};
+
+//___________________________________________________________________
+//                      EXTERN
+//___________________________________________________________________
+extern uint8_t* struc_behavior;
 extern uint8_t* agents_t;
-typedef struct units_struc unit;
-typedef unit* units;
-units units_ptr;
-#endif
+extern uint8_t* losarea_dat;
+extern uint8_t* expirean_temp_2;
+extern uint8_t* BRAIN_DAT;
+
+extern int16_t tick;
+extern int16_t second;
+extern int16_t minute;
+extern int16_t hours;
+extern int8_t train_flag;
+extern uint32_t EXPERIEN_proccesing_flag;
+extern int8_t update_matrix_flag;
+extern uint32_t sc_bld_owner_sc;
+extern WEAPEXP_write_flag;
+extern sc_mission_type;
+extern uint32_t agent_count;
+extern uint32_t dword_2A1578;
+extern int32_t unit_action_flag;
+extern int16_t AI_control_FULL;
+extern int32_t brain_index_count;
+extern int8_t game_type_0;
+extern int32_t dword_27A0F0;
+
+
+extern int8_t WEAPEXP_1_1[17160];
+extern int8_t WEAPEXP_2_t[17160];
+extern uint32_t squad_array[60];
+extern uint32_t side_array[60];
+extern uint16_t alien_health_damage_array[100];
+extern uint16_t agent_health_damage_array[100];
+
+extern uint16_t choosen_agent;
+extern uint16_t agent_choose_interf[6];
+// 
+//
+// 
+////=============const init  functions==================== 
+struct units_init
+{
+	int8_t score;
+	int8_t field_1;
+	int8_t speed;
+	int8_t max_speed_increese;
+	int16_t health;
+	int16_t max_health_increase;
+	int8_t unk1;
+	int8_t unk2;
+	int8_t stamina;
+	int8_t max_stamina_increase;
+	int8_t reaction;
+	int8_t max_reaction_increase;
+	int8_t strenght;
+	int8_t max_strenght_increase;
+	int8_t braverly;
+	int8_t max_braverly_increase;
+	int8_t psi_energy;
+	int8_t max_psi_energy_increase;
+	int8_t psi_attack;
+	int8_t max_psi_attack_incriase;
+	int8_t psi_defece;
+	int8_t max_psi_defece_incriace;
+	int8_t field_24;
+	int8_t field_25;
+	int8_t accuracy_t1;
+	int8_t max_accuracy_incriace;
+	int8_t field_28;
+	int8_t field_30;
+	int8_t field_31;
+	int8_t field_32;
+	int8_t bio_skill;
+	int8_t max_bio_skill_increace;
+	int8_t qua_skill;
+	int8_t max_qua_skill_increace;
+	int8_t eng_skill;
+	int8_t max_eng_skill_increace;
+	int8_t field_38;
+	int8_t field_39;
+	int8_t field_40;
+	int8_t field_41;
+	int8_t field_42;
+	int8_t field_43;
+	int8_t field_44;
+	int8_t field_45;
+	int8_t field_46;
+	int8_t field_47;
+	int8_t field_48;
+	int8_t field_49;
+	int8_t field_50;
+	int8_t field_51;
+	int8_t field_52;
+	int8_t field_53;
+	int8_t field_54;
+	int8_t field_55;
+	int8_t field_56;
+	int8_t field_57;
+	int8_t field_58;
+	int8_t field_59;
+	int16_t size_x;
+	int16_t size_y;
+	int16_t field_64;
+	int8_t movement_type;
+	int8_t field_67;
+	int8_t inventory;
+	int8_t leg_type_t1;
+	int16_t leg_armor;
+	int16_t body_armor;
+	int16_t r_arm_armor;
+	int16_t l_arm_armor;
+	int16_t head_armor;
+	int16_t unk_armor;
+	int8_t unknown_71;
+	int8_t equipment_set_1;
+	int8_t equipment_set_2;
+	int8_t equipment_set_3;
+	int8_t equipment_set_4;
+	int8_t equipment_set_5;
+	int16_t damage_modifier_group;
+	int16_t unknown_78;
+	int16_t empty_slot_flag;
+	int8_t assigment_type;
+	int8_t field_5F;
+	int16_t image_position_1;
+	int16_t image_position_2;
+	int16_t image_position_3;
+	int16_t image_position_4;
+	int16_t image;
+};
+// 
+// 
+// 
+//=============common functions====================
+struct behavior_struct* find_in_behavior_struc(void);
+int16_t set_2_expirean_temp_section(int16_t expirean_row_num, int16_t section);
+int16_t side_array_set(int16_t side, int16_t squad);
+int16_t calc_unit_to_unit_direction_2d(int16_t x1, int16_t y1, int16_t x2, int16_t y2);
+
+
+//typedef struct behavior_struc behavior;
+//typedef behavior* bhvr;
+//struct behavior_struc *bhvr_ptr;
+//-----------------------------------------
+//extern uint16_t* expirean_temp_2;
+//struct behavior_struc* expirean_ptr;
+//-----------------------------------------
+

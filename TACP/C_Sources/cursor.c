@@ -63,7 +63,7 @@ int draw_cursor(uint8_t* cur_img)
 
 void set_cur_palette()
 {
-	SDL_Color color;
+    SDL_Color color = {0,0,0};
 	SDL_Palette* p = cur_surface->format->palette;
 	int ret_val = 0;
 
@@ -95,8 +95,8 @@ void set_cur_palette()
 static SDL_Cursor* init_system_cursor(const char* image[])
 {
     int i, row, col;
-    uint8_t data[4 * 24];
-    uint8_t mask[4 * 24];
+    uint8_t data[4 * 24] = {0};
+    uint8_t mask[4 * 24] = {0};
     int hot_x, hot_y;
 
     i = -1;

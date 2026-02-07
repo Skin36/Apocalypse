@@ -2,6 +2,7 @@
 // All calls here from UFO@4P.asm //
 /////////////////////////////////////
 
+
 #if defined(_MSC_VER)
 #    include <direct.h>
 #endif
@@ -27,5 +28,7 @@ libr()
 	//sprintf(""," ");
 	_findclose(hFile);
 }
+
+
 
 
