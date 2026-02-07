@@ -8,9 +8,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UFOP", "..\UFOP\UFOP.vcxproj", "{82B6AA0F-505C-48B3-850D-7E48AC441D7B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TACP", "..\TACP\TACP.vcxproj", "{19D63F24-B5E4-449B-B8A3-29C81F24B185}"
-	ProjectSection(ProjectDependencies) = postProject
-		{82B6AA0F-505C-48B3-850D-7E48AC441D7B} = {82B6AA0F-505C-48B3-850D-7E48AC441D7B}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,7 +24,6 @@ Global
 		{36A92BDE-1C63-4FE0-BA05-F870823F912D}.Release|x64.ActiveCfg = Release|Win32
 		{36A92BDE-1C63-4FE0-BA05-F870823F912D}.Release|x64.Build.0 = Release|Win32
 		{36A92BDE-1C63-4FE0-BA05-F870823F912D}.Release|x86.ActiveCfg = Release|Win32
-		{36A92BDE-1C63-4FE0-BA05-F870823F912D}.Release|x86.Build.0 = Release|Win32
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Debug|x64.ActiveCfg = Release|Win32
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Debug|x64.Build.0 = Release|Win32
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Debug|x86.ActiveCfg = Release|Win32
@@ -35,7 +31,6 @@ Global
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Release|x64.ActiveCfg = Release|Win32
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Release|x64.Build.0 = Release|Win32
 		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Release|x86.ActiveCfg = Release|Win32
-		{82B6AA0F-505C-48B3-850D-7E48AC441D7B}.Release|x86.Build.0 = Release|Win32
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Debug|x64.ActiveCfg = Release|Win32
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Debug|x64.Build.0 = Release|Win32
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Debug|x86.ActiveCfg = Release|Win32
@@ -43,7 +38,6 @@ Global
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Release|x64.ActiveCfg = Release|Win32
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Release|x64.Build.0 = Release|Win32
 		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Release|x86.ActiveCfg = Release|Win32
-		{19D63F24-B5E4-449B-B8A3-29C81F24B185}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,5 +15,9 @@
     <ClInclude Include="..\..\APOC\C_Sources\restart.h">
       <Filter>C Sources</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\APOC\C_Sources\common.h">
+      <Filter>C Sources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\APOC\C_Sources\init_game.h" />
   </ItemGroup>
 </Project>
