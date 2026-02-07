@@ -23,7 +23,7 @@
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{19d63f24-b5e4-449b-b8a3-29c81f24b185}</ProjectGuid>
     <RootNamespace>TACP</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -180,8 +180,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\TACP\C_Sources\action.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\const_init.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\matrixio.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\matrix_calc.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\struc_init.c" />
     <ClCompile Include="..\..\TACP\C_Sources\calc_brain.c" />
     <ClCompile Include="..\..\TACP\C_Sources\cursor.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\debug.c" />
     <ClCompile Include="..\..\TACP\C_Sources\exit.c" />
     <ClCompile Include="..\..\TACP\C_Sources\keyboard.c" />
     <ClCompile Include="..\..\TACP\C_Sources\library_func.c" />
@@ -189,10 +195,17 @@
     <ClCompile Include="..\..\TACP\C_Sources\music.c" />
     <ClCompile Include="..\..\TACP\C_Sources\palette.c" />
     <ClCompile Include="..\..\TACP\C_Sources\sdl_event.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\sound.c" />
+    <ClCompile Include="..\..\TACP\C_Sources\soundsystem.c" />
     <ClCompile Include="..\..\TACP\C_Sources\timer.c" />
     <ClCompile Include="..\..\TACP\C_Sources\window.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\TACP\C_Sources\action.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\const_init.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\matrixio.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\matrix_calc.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\struc_init.h" />
     <ClInclude Include="..\..\TACP\C_Sources\calc_brain.h" />
     <ClInclude Include="..\..\TACP\C_Sources\cursor.h" />
     <ClInclude Include="..\..\TACP\C_Sources\debug.h" />
@@ -201,6 +214,8 @@
     <ClInclude Include="..\..\TACP\C_Sources\music.h" />
     <ClInclude Include="..\..\TACP\C_Sources\palette.h" />
     <ClInclude Include="..\..\TACP\C_Sources\sdl_event.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\sound.h" />
+    <ClInclude Include="..\..\TACP\C_Sources\soundsystem.h" />
     <ClInclude Include="..\..\TACP\C_Sources\TACP.h" />
     <ClInclude Include="..\..\TACP\C_Sources\timer.h" />
     <ClInclude Include="..\..\TACP\C_Sources\window.h" />
@@ -217,7 +232,6 @@
   <ItemGroup>
     <None Include="..\..\TACP\ASM_Sources\TACP4.inc" />
     <None Include="..\..\TACP\ASM_Sources\TACP4_data.inc" />
-    <None Include="..\..\TACP\ASM_Sources\TACP4_struct.inc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

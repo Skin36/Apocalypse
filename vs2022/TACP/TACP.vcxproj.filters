@@ -13,6 +13,21 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="C Sources\calc_AI">
+      <UniqueIdentifier>{8fb82153-ea15-4dd9-9d55-4a9d052d42b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\struct_init">
+      <UniqueIdentifier>{def5db85-21cd-4b93-af48-5754f3ba2657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\t_action">
+      <UniqueIdentifier>{c0435b21-876f-4b79-8445-4cc8b79ce61b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\sound">
+      <UniqueIdentifier>{9c8cb595-9139-420f-92ce-93922044c811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="C Sources\const_init">
+      <UniqueIdentifier>{bef3ad28-9951-4a50-b2a7-165070e77923}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\TACP\C_Sources\cursor.c">
@@ -25,9 +40,6 @@
       <Filter>C Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\TACP\C_Sources\main.c">
-      <Filter>C Sources</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\TACP\C_Sources\music.c">
       <Filter>C Sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\TACP\C_Sources\palette.c">
@@ -48,6 +60,33 @@
     <ClCompile Include="..\..\TACP\C_Sources\exit.c">
       <Filter>C Sources</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\debug.c">
+      <Filter>C Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\matrixio.c">
+      <Filter>C Sources\calc_AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\struc_init.c">
+      <Filter>C Sources\struct_init</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\matrix_calc.c">
+      <Filter>C Sources\calc_AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\action.c">
+      <Filter>C Sources\t_action</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\sound.c">
+      <Filter>C Sources\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\soundsystem.c">
+      <Filter>C Sources\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\music.c">
+      <Filter>C Sources\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\TACP\C_Sources\const_init.c">
+      <Filter>C Sources\const_init</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\TACP\C_Sources\cursor.h">
@@ -57,9 +96,6 @@
       <Filter>C Sources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\TACP\C_Sources\keyboard.h">
-      <Filter>C Sources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\TACP\C_Sources\music.h">
       <Filter>C Sources</Filter>
     </ClInclude>
     <ClInclude Include="..\..\TACP\C_Sources\palette.h">
@@ -83,15 +119,36 @@
     <ClInclude Include="..\..\TACP\C_Sources\exit.h">
       <Filter>C Sources</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\matrixio.h">
+      <Filter>C Sources\calc_AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\struc_init.h">
+      <Filter>C Sources\struct_init</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\matrix_calc.h">
+      <Filter>C Sources\calc_AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\action.h">
+      <Filter>C Sources\t_action</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\sound.h">
+      <Filter>C Sources\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\soundsystem.h">
+      <Filter>C Sources\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\music.h">
+      <Filter>C Sources\sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TACP\C_Sources\const_init.h">
+      <Filter>C Sources\const_init</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\TACP\ASM_Sources\TACP4.inc">
       <Filter>ASM Sources</Filter>
     </None>
     <None Include="..\..\TACP\ASM_Sources\TACP4_data.inc">
-      <Filter>ASM Sources</Filter>
-    </None>
-    <None Include="..\..\TACP\ASM_Sources\TACP4_struct.inc">
       <Filter>ASM Sources</Filter>
     </None>
   </ItemGroup>
